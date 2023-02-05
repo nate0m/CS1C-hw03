@@ -2,8 +2,8 @@ CC = g++
 
 all: hw03
 
-hw03: date.o employee.o hw03.cpp hw03.h
-	$(CC) hw03.cpp -o hw03 date.o employee.o
+hw03: date.o employee.o programmer.o architech.o hw03.cpp hw03.h
+	$(CC) hw03.cpp -o hw03 date.o employee.o programmer.o architech.o
 
 date.o: date.cpp hw03.h
 	$(CC) -c date.cpp -o date.o
@@ -11,8 +11,14 @@ date.o: date.cpp hw03.h
 employee.o: employee.cpp hw03.h
 	$(CC) -c employee.cpp -o employee.o
 
+programmer.o: programmer.cpp programmer.h
+	$(CC) -c programmer.cpp -o programmer.o
+
+architech.o: architech.cpp architech.h
+	$(CC) -c architech.cpp -o architech.o
+
 clean: 
 	rm hw03 *.o
 
 tar:
-	tar cf hw03.tar hw03.src Makefile hw03.cpp hw03.h date.cpp employee.cpp 
+	tar cf hw03.tar hw03.src Makefile hw03.cpp hw03.h programmer.h architech.h date.cpp employee.cpp programmer.cpp architech.cpp  

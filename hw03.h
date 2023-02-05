@@ -1,31 +1,28 @@
 #ifndef _HW03_H
 #define _HW03_H
 
-#include <ctime>
 #include <string>
 #include <iostream> 
+#include <ctime>
 using namespace std;
 
 class date {
+
+	friend ostream &operator<<(ostream &cout, const date& d);	
 
     public:
 
     date();
     date(int m, int d, int y);
 
-    date today();
+    date today(); // should make this the default constructor
 
-    void printDate();
+    void printDate() const;
     
     private:
         int month;
         int day;
         int year;
-};
-struct id {
-
-    double number;
-    id() : number(00000000) {}
 };
 class employee {
 
@@ -34,13 +31,16 @@ class employee {
     employee();
     employee(string n, string t, string p, int a, char g, int s); // contructor for new hire
 
-    void changeName();
-    void changeTitle();
-    void changeSalary();
-    void changeId();
-    void changeAge();
-    void changeGender();
-    void changeHiredDate();
+	void const printEmployee();
+
+    void changeName     (string n)  {name = n;}
+    void changeTitle    (string t)  {title = t;}
+	void changePnumber  (string p)  {pNumber = p;}
+    void changeId       (double id) {idNum = id;}
+    void changeSalary   (int s)     {salary = s;}
+    void changeAge      (int a)     {age = a;}
+    void changeGender   (char g)    {gender = g;}
+    void changeHiredDate(date d)    {hired = d;}
 
     double generateId();
 
@@ -48,12 +48,12 @@ class employee {
         string name;
         string title;
         string pNumber;
-        id idNum;
+        double idNum;
         int age;
         char gender;
         int salary;
         date hired;
-        static id numEmployees;
+        static double numEmployees;
 };
 
 
