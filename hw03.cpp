@@ -1,13 +1,34 @@
 #include "hw03.h"
 #include "programmer.h"
 #include "architech.h"
+#include "timeClass.h"
 
 int main() {
 
- date random(12, 7, 02);
+	employee jole;
+	programmer yolonda;
+	architech bo;
+
+	date random(12, 7, 02);
 	employee tod("tod", "janitor", "900-123-777", 17, 'M', 30000);
 	programmer bill("bill", "programmer", "777-777-7777", 42, 'M', 99000, "Jacob", 7, 5, true, true);
 	architech joe("joe", "architech", "222-222-2222", 67, 'F', 12000, "Cob", 3, 8, 25);
+
+	Time pizzaTime(12, 30, 10);
+	extentedTime January(10, 20, 30, CENTRAL);
+	invoice orderPizza(pizzaTime);
+
+	cout << "---EC---" << endl;
+	cout << January << endl;
+	cout << orderPizza << endl;
+	cout << endl;
+
+	jole.printEmployee();
+	cout << endl;
+	yolonda.printProgrammer();
+	cout << endl;
+	bo.printArchitech();
+	cout << endl;
 
 	tod.printEmployee();
 	cout << endl;
@@ -58,6 +79,9 @@ int main() {
 	cout << endl;
 	joe.printArchitech();
 	cout << endl;	
+
+
+
 
     return 0;
 }

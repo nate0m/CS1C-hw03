@@ -9,12 +9,10 @@ class architech: public employee {
 	public:
 		architech();
 		architech(string n, string t, string pNum, int a, char g, int s, 
-				   string sN, int dNum, int lSInc, int yE) : 
-			employee(n, t, pNum, a, g, s),
-			suprName{sN},
-			departNum{dNum},
-			lSalInc{lSInc} {}
-
+				   string sN, int dNum, int lSInc, int yE) : employee(n, t, pNum, a, g, s),
+															 suprName{sN},
+															 departNum{dNum},
+															 lSalInc{lSInc} {}
 		void const printArchitech();
 
 		void changeSuprName (string sN) {suprName = sN;}

@@ -2,6 +2,7 @@
 
 architech::architech() : employee() {
 
+	// initialize architech object to default values
 	suprName  = "undefined-name";
 	departNum = 0;
 	lSalInc   = 0;
@@ -9,6 +10,7 @@ architech::architech() : employee() {
 }
 void const architech::printArchitech() {
 
+	// print architch object to console
 	employee::printEmployee();
 	
 	cout << "Superior Name: " << suprName << endl;

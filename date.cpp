@@ -14,9 +14,6 @@ date::date() {
 	day = ltm->tm_mday;
 	year = ltm->tm_year +1900;
 }
-
-date::date(int m, int d, int y) : month{m}, day{d}, year{y} {}
-
 date date::today() {
 
     // retrieveing curent date and returing as type date

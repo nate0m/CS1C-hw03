@@ -1,0 +1,157 @@
+Script started on 2023-02-06 15:20:39-08:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="105" LINES="57"]
+[?2004h]0;nate@pop-os: ~/Documents/school/CS1C/src/hw03[01;32mnate@pop-os[00m:[01;34m~/Documents/school/CS1C/src/hw03[00m$ date 
+[?2004lMon Feb  6 03:20:44 PM PST 2023
+[?2004h]0;nate@pop-os: ~/Documents/school/CS1C/src/hw03[01;32mnate@pop-os[00m:[01;34m~/Documents/school/CS1C/src/hw03[00m$ ls -l
+[?2004ltotal 44
+-rw-rw-r-- 1 nate nate  505 Feb  6 15:07 architech.cpp
+-rw-rw-r-- 1 nate nate  696 Feb  6 15:08 architech.h
+-rw-rw-r-- 1 nate nate  636 Feb  6 15:16 date.cpp
+-rw-rw-r-- 1 nate nate 1125 Feb  6 15:11 employee.cpp
+-rw-rw-r-- 1 nate nate 1915 Feb  6 15:20 hw03.cpp
+-rw-rw-r-- 1 nate nate 1226 Feb  6 15:16 hw03.h
+-rw-rw-r-- 1 nate nate    0 Feb  6 15:20 hw03.src
+-rw-rw-r-- 1 nate nate  725 Feb  6 15:17 Makefile
+-rw-rw-r-- 1 nate nate  534 Feb  6 15:13 programmer.cpp
+-rw-rw-r-- 1 nate nate  750 Feb  6 15:13 programmer.h
+-rw-rw-r-- 1 nate nate  392 Feb  6 15:14 timeClass.cpp
+-rw-rw-r-- 1 nate nate  975 Feb  6 15:14 timeClass.h
+[?2004h]0;nate@pop-os: ~/Documents/school/CS1C/src/hw03[01;32mnate@pop-os[00m:[01;34m~/Documents/school/CS1C/src/hw03[00m$ make all
+[?2004lg++ -c date.cpp -o date.o
+g++ -c employee.cpp -o employee.o
+g++ -c programmer.cpp -o programmer.o
+g++ -c architech.cpp -o architech.o
+g++ -c timeClass.cpp -o timeClass.o
+g++ hw03.cpp -o hw03 date.o employee.o programmer.o architech.o timeClass.o
+[?2004h]0;nate@pop-os: ~/Documents/school/CS1C/src/hw03[01;32mnate@pop-os[00m:[01;34m~/Documents/school/CS1C/src/hw03[00m$ ls -l
+[?2004ltotal 124
+-rw-rw-r-- 1 nate nate   505 Feb  6 15:07 architech.cpp
+-rw-rw-r-- 1 nate nate   696 Feb  6 15:08 architech.h
+-rw-rw-r-- 1 nate nate  5736 Feb  6 15:20 architech.o
+-rw-rw-r-- 1 nate nate   636 Feb  6 15:16 date.cpp
+-rw-rw-r-- 1 nate nate  4384 Feb  6 15:20 date.o
+-rw-rw-r-- 1 nate nate  1125 Feb  6 15:11 employee.cpp
+-rw-rw-r-- 1 nate nate  7976 Feb  6 15:20 employee.o
+-rwxrwxr-x 1 nate nate 44736 Feb  6 15:20 [0m[01;32mhw03[0m
+-rw-rw-r-- 1 nate nate  1915 Feb  6 15:20 hw03.cpp
+-rw-rw-r-- 1 nate nate  1226 Feb  6 15:16 hw03.h
+-rw-rw-r-- 1 nate nate     0 Feb  6 15:20 hw03.src
+-rw-rw-r-- 1 nate nate   725 Feb  6 15:17 Makefile
+-rw-rw-r-- 1 nate nate   534 Feb  6 15:13 programmer.cpp
+-rw-rw-r-- 1 nate nate   750 Feb  6 15:13 programmer.h
+-rw-rw-r-- 1 nate nate  5904 Feb  6 15:20 programmer.o
+-rw-rw-r-- 1 nate nate   392 Feb  6 15:14 timeClass.cpp
+-rw-rw-r-- 1 nate nate   975 Feb  6 15:14 timeClass.h
+-rw-rw-r-- 1 nate nate  3568 Feb  6 15:20 timeClass.o
+[?2004h]0;nate@pop-os: ~/Documents/school/CS1C/src/hw03[01;32mnate@pop-os[00m:[01;34m~/Documents/school/CS1C/src/hw03[00m$ ./hw03 
+[?2004l---EC---
+Extented Time: 10:20:30 CENTRAL
+Invoice Time: 12:30:10
+
+Name : undefined-name
+ID Number: 10001
+Phone Number: undefined-phoneNumber
+Age: 0
+Gender: X
+Title: undefined-title 
+Salary: 0
+Date Hired: 2/6/2023
+
+Name : undefined-name
+ID Number: 10002
+Phone Number: undefined-phoneNumber
+Age: 0
+Gender: X
+Title: undefined-title 
+Salary: 0
+Date Hired: 2/6/2023
+Superior Name: undefined-name
+Depart Number: 0
+Last Salary Inc: 0
+
+Name : undefined-name
+ID Number: 10003
+Phone Number: undefined-phoneNumber
+Age: 0
+Gender: X
+Title: undefined-title 
+Salary: 0
+Date Hired: 2/6/2023
+Superior Name: undefined-name
+Depart Number: 0
+Last Salary Inc: 0
+Years of Experience: 0
+
+Name : tod
+ID Number: 10004
+Phone Number: 900-123-777
+Age: 17
+Gender: M
+Title: janitor
+Salary: 30000
+Date Hired: 2/6/2023
+
+Name : bill
+ID Number: 10005
+Phone Number: 777-777-7777
+Age: 42
+Gender: M
+Title: programmer
+Salary: 99000
+Date Hired: 2/6/2023
+Superior Name: Jacob
+Depart Number: 7
+Last Salary Inc: 5
+Cpp dev
+Java dev
+
+Name : joe
+ID Number: 10006
+Phone Number: 222-222-2222
+Age: 67
+Gender: F
+Title: architech
+Salary: 12000
+Date Hired: 2/6/2023
+Superior Name: Cob
+Depart Number: 3
+Last Salary Inc: 8
+Years of Experience: -1320032758
+
+Name : Bill
+ID Number: 87878
+Phone Number: 888-888-8888
+Age: 14
+Gender: X
+Title: Landscaper
+Salary: 999999
+Date Hired: 12/7/2
+
+Name : Tod
+ID Number: 0
+Phone Number: 555-555-5555
+Age: 88
+Gender: F
+Title: Different-Programmer
+Salary: 77777
+Date Hired: 12/7/2
+Superior Name: Boof
+Depart Number: 3
+Last Salary Inc: 27
+
+Name : Po
+ID Number: 21293
+Phone Number: 444-444-4444
+Age: 99
+Gender: M
+Title: Other-Architech
+Salary: 4444444
+Date Hired: 12/7/2
+Superior Name: Jeff
+Depart Number: 8
+Last Salary Inc: 10
+Years of Experience: 30
+
+[?2004h]0;nate@pop-os: ~/Documents/school/CS1C/src/hw03[01;32mnate@pop-os[00m:[01;34m~/Documents/school/CS1C/src/hw03[00m$ exit
+[?2004lexit
+
+Script done on 2023-02-06 15:21:22-08:00 [COMMAND_EXIT_CODE="0"]

@@ -4,6 +4,7 @@ double employee::numEmployees = 0;
 
 employee::employee() {
 
+	// initializes employee object to default values
     name = "undefined-name";
     title = "undefined-title ";
     pNumber = "undefined-phoneNumber";
@@ -18,6 +19,7 @@ employee::employee() {
 }
 employee::employee(string n, string t, string p, int a, char g, int s) : 
 
+	// initializes employee object to set passed values
 	name{n},
 	title{t},
 	pNumber{p},
@@ -33,7 +35,8 @@ employee::employee(string n, string t, string p, int a, char g, int s) :
 
 }
 double employee::generateId() {
-    
+
+	// takes number of employees and adds 10000 as the employees id number and returns as double    
     return numEmployees + 10000;
 }
 void const employee::printEmployee() {
