@@ -7,6 +7,7 @@ void Time::printTime() {
 }
 ostream &operator<<(ostream &cout, extentedTime& exT) {
 
+	// overloaded output for extentedTime
 	cout << "Extented Time: ";
 	exT.printTime();
 	cout << " " << exT.stringTZones[exT.tZone];
@@ -15,6 +16,7 @@ ostream &operator<<(ostream &cout, extentedTime& exT) {
 }
 ostream &operator<<(ostream &cout, invoice& iv) {
 
+	// overloaded output for invoice
 	cout << "Invoice Time: ";
 	iv.purchase.printTime();
 

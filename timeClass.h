@@ -16,7 +16,9 @@ class Time {
 		Time(int hrs, int mins, int secs) : hours{hrs},
 											minutes{mins},
 											seconds{secs} {}
-		void printTime(); 
+
+		void printTime(); // PRECONDITION  - Time object created
+						  // POSTCONDITION - Time object printed 
 	private:
 		int hours;
 		int minutes;
@@ -24,7 +26,8 @@ class Time {
 };
 class extentedTime: public Time {
 
-	friend ostream &operator<<(ostream &cout, extentedTime& exT);
+	friend ostream &operator<<(ostream &cout, extentedTime& exT); // PRECONDITION  - Time object created
+																  // POSTCONDITION - Time object output
 
 	public:
 		extentedTime() {tZone = CENTRAL;}
@@ -37,17 +40,15 @@ class extentedTime: public Time {
 };
 class invoice: public Time {
 
-	friend ostream &operator<<(ostream &cout, invoice& iv);
+	friend ostream &operator<<(ostream &cout, invoice& iv); // PRECONDITION  - invoice object created
+															// POSTCONDITION - invoice object output
+
 	public:
 		invoice();
 		invoice(Time t) : purchase{t} {}
 
 	private:
 		Time purchase;
-
 };
-
-
-
 
 #endif

@@ -13,8 +13,16 @@ class architech: public employee {
 															 suprName{sN},
 															 departNum{dNum},
 															 lSalInc{lSInc} {}
-		void const printArchitech();
 
+		void const printArchitech(); // PRECONDITION  - architech object created
+									 // POSTCONDITION - architech object printed
+
+ 		/**********************************************
+    	 POSTCONDITON FOR ALL CHANGE FUNCTIONS
+         - employee object made
+         PRECONDITION FOR ALL CHAGNE FUNCTIONS
+         - private data member chagned
+        ********************************************/
 		void changeSuprName (string sN) {suprName = sN;}
 		void changeDepartNum(int dN)    {departNum = dN;}
 		void changeLSalInc  (int lSInc) {lSalInc = lSInc;}

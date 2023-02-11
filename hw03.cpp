@@ -3,12 +3,30 @@
 #include "architech.h"
 #include "timeClass.h"
 
+/*******************************************************
+ Createe differnt types of employee objects which has 
+ special private date members. All employee and 
+ derived objects such as programmer and architech
+ can be created using default or alternate constructors
+ each private data member in a class has a public
+ member function which can change it.
+ ******************************************************/
+
 int main() {
 
 	employee jole;
 	programmer yolonda;
 	architech bo;
 
+	// output  for class heading
+	cout << "***********************************\n";
+	cout << "Programmed By: Nathan Milton\n";
+	cout << "Student Id   : 1204398\n";
+	cout << "Assignment   : HW03\n";
+	cout << "CS1C         : T/TH 1:30\n";   
+ 	cout << "***********************************\n" << endl;
+
+	// initializing objects
 	date random(12, 7, 02);
 	employee tod("tod", "janitor", "900-123-777", 17, 'M', 30000);
 	programmer bill("bill", "programmer", "777-777-7777", 42, 'M', 99000, "Jacob", 7, 5, true, true);
@@ -18,6 +36,7 @@ int main() {
 	extentedTime January(10, 20, 30, CENTRAL);
 	invoice orderPizza(pizzaTime);
 
+	// printing objects
 	cout << "---EC---" << endl;
 	cout << January << endl;
 	cout << orderPizza << endl;
@@ -37,6 +56,7 @@ int main() {
 	joe.printArchitech();
 	cout << endl;
 
+	// changing private data members with public member functions
 	tod.changeName("Bill");
 	tod.changeTitle("Landscaper");
 	tod.changePnumber("888-888-8888");
@@ -73,15 +93,13 @@ int main() {
 	joe.changeLSalInc(10);
 	joe.changeYearsExp(30);
 
+	// printing objects
 	tod.printEmployee();
 	cout << endl;
 	bill.printProgrammer();
 	cout << endl;
 	joe.printArchitech();
 	cout << endl;	
-
-
-
 
     return 0;
 }

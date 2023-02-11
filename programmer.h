@@ -17,8 +17,15 @@ class programmer: public employee {
 			cpp{c},
 			java{j} {}
 
-		void const printProgrammer();
+		void const printProgrammer(); // PRECONDITION  - programmer object created
+									  // POSTCONDITION - programmer object printed
 
+		/**********************************************
+		POSTCONDITON FOR ALL CHANGE FUNCTIONS
+		- employee object made
+		PRECONDITION FOR ALL CHAGNE FUNCTIONS
+		- private data member chagned
+		********************************************/
 		void changeSuprName (string sN) {suprName = sN;}
 		void changeDepartNum(int dN)    {departNum = dN;}
 		void changeLSalInc  (int lSInc) {lSalInc = lSInc;}

@@ -7,7 +7,7 @@ ostream &operator<<(ostream &cout, const date& d) {
 }
 date::date() {
 
-    // retrieveing curent date and returing as type date
+    // retrieveing curent date and setting to month day year
     time_t now = time(0);
     tm *ltm = localtime(&now);
     month = ltm->tm_mon + 1;
