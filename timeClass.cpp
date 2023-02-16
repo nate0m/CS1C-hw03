@@ -1,6 +1,6 @@
 #include "timeClass.h"
 
-void Time::printTime() {
+void Time::printTime() const {
 
 	cout << hours << ":" << minutes << ":" << seconds;
 

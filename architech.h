@@ -1,9 +1,10 @@
 #ifndef _ARCHITECH_H
 #define _ARCHITECH_H
 
-#include "hw03.h"
+#include "employee.h"
 
-
+// --CLASS-- derived from employee added specific architech private data members
+// used to store architech employee information 
 class architech: public employee {
 
 	public:
@@ -14,7 +15,7 @@ class architech: public employee {
 															 departNum{dNum},
 															 lSalInc{lSInc} {}
 
-		void const printArchitech(); // PRECONDITION  - architech object created
+		void printArchitech() const; // PRECONDITION  - architech object created
 									 // POSTCONDITION - architech object printed
 
  		/**********************************************

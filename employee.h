@@ -1,31 +1,13 @@
-#ifndef _HW03_H
-#define _HW03_H
+#ifndef _EMPLOYEE_H_
+#define _EMPLOYEE_H_
 
+#include "date.h"
 #include <string>
-#include <iostream> 
-#include <ctime>
+#include <iostream>
 using namespace std;
 
-class date {
-
-	friend ostream &operator<<(ostream &cout, const date& d); // PRECONDITION  - date object created
-															  // POSTCONDITION - date object output
-
-    public:
-    	date();
-    	date(int m, int d, int y) : month{m}, day{d}, year{y} {}
-
-		date today(); // PRECONDITION - date object created
-					  // POSTCONDITION - date object = todays date
-
-    	void printDate() const; // PRECONDITION  - date object created
-								// POSTCONDITION - date object printed
-    
-    private:
-        int month;
-        int day;
-        int year;
-};
+// --CLASS EMPLOYEE-- used to store employee information like (name, id number, etc)
+// CLASS PRECONDITIONS - some constructors use a type date via user input or date default constructor
 class employee {
 
     public:
@@ -33,7 +15,7 @@ class employee {
     	employee();
     	employee(string n, string t, string p, int a, char g, int s); // contructor for new hire
 
-		void const printEmployee(); // PRECONDITION  - employee object created
+		void printEmployee() const; // PRECONDITION  - employee object created
 									// POSTCONDITION - employee object create
 
 		/**********************************************
@@ -64,5 +46,6 @@ class employee {
         date hired;
         static double numEmployees; // tracks number of employees used to generate ids
 };
+
 
 #endif

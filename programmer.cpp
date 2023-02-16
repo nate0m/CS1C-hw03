@@ -1,15 +1,13 @@
 #include "programmer.h"
 
-programmer::programmer() : employee() {
-
-	// initializes programmer object to default values
-	suprName  = "undefined-name";
-	departNum = 0;
-	lSalInc   = 0;
-	cpp       = 0;
-	java      = 0;
-}
-void const programmer::printProgrammer() {
+programmer::programmer() : employee(),
+                           suprName{"undefined-name"},
+	                       departNum{0},
+	                       lSalInc{0},
+	                       cpp{0},
+	                       java{0} {}
+                           
+void programmer::printProgrammer() const {
 
 	employee::printEmployee();
 	
